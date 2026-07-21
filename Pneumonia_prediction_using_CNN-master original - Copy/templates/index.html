@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Pneumonia Prediction</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Prediction Form Section -->
+        <section class="prediction-section">
+            <div class="card">
+                <h2>Upload Chest X-ray Image</h2>
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                    <label for="file" class="upload-label">Choose Image</label>
+                    <input type="file" name="image" id="file" accept="image/*" onchange="loadFile(event)">
+                    <div class="preview">
+                        <img id="output" alt="Preview Image">
+                    </div>
+                    <button type="submit" class="submit-btn">Predict</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Pneumonia Prediction. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Image Preview -->
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.display = "block"; // Ensure the image is shown
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Prediction Result</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        .back-btn {
+            margin-top: 30px; /* Adjust this value to move the button down */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-container">
+        <h2>Pneumonia Prediction Result</h2>
+        <div class="prediction-text">{{ prediction }}</div>
+        <div class="prediction-result">Based on the uploaded chest X-ray image, the model predicts:</div>
+        
+        <!-- Display the uploaded image (if needed) -->
+        <!-- <img src="{{ uploaded_file }}" alt="Uploaded Image"> -->
+
+        <div class="back-btn">
+            <a href="/" class="submit-btn">Go Back</a>
+        </div>
+    </div>
+
+</body>
+</html>

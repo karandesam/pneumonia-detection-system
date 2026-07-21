@@ -1,0 +1,9 @@
+﻿Normal/
+Pneumonia/
+*.h5
+*.keras
+*.pt
+*.pth
+*.pkl
+__pycache__/
+venv/
